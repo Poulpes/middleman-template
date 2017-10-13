@@ -1,6 +1,6 @@
-# Le Wagon Middleman template
+# Middleman template
 
-Welcome on this short guide on how to quickstart your next Middleman project with [Le Wagon](https://www.lewagon.com) best practices.
+Welcome on this short guide on how to quickstart your next Middleman project.
 
 ## Getting started
 
@@ -15,12 +15,12 @@ Then run the following:
 
 ```bash
 cd ~/code/YOUR_GITHUB_NICKNAME
-middleman init YOUR_PROJECT -B -T lewagon/middleman-template
+middleman init YOUR_PROJECT -B -T poulpes/middleman-template
 cd YOUR_PROJECT
 
 git init
 git add .
-git commit -m 'Generated a new middleman project with lewagon/middleman-template'
+git commit -m 'Generated a new middleman project with poulpes/middleman-template'
 
 hub create    # To create a repo on GitHub
 git remote -v # Check that the `origin` remote is set.
