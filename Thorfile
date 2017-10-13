@@ -15,7 +15,7 @@ module Middleman
     end
 
     def download_assets
-      run 'curl -L https://github.com/poulpes/stylesheets/archive/master.zip > stylesheets.zip'
+      run 'curl -L https://github.com/poulpes/rails-stylesheets/archive/master.zip > stylesheets.zip'
       run 'unzip stylesheets.zip -d source && rm stylesheets.zip'
       run 'mv source/rails-stylesheets-master source/stylesheets'
       run 'mv source/stylesheets/application.scss source/stylesheets/application.css.scss'
@@ -26,6 +26,8 @@ module Middleman
         run "sed -i '/font-awesome-sprockets/d' ./source/stylesheets/application.css.scss"
       end
       run 'rm source/stylesheets/pages/_home.scss && mv source/home.scss source/stylesheets/pages/_home.scss'
+      run 'mv source/about.scss source/stylesheets/pages/_about.scss'
+      run 'echo "@import \"about\";" >> source/stylesheets/pages/_index.scss'
     end
 
     def generate_binstub
